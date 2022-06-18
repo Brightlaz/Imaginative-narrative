@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.box {
+    --width: 30vmin;
+    --height: 20vmin;
+    --depth: 10vmin;
+    --hue: 30;
+    --alpha: 0.8;
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+    /* background: hsla(var(--hue), 50%, 50%, var(--alpha)); */
+    perspective: 800px;
+    transform-style: preserve-3d;
+    transform: rotateX(24deg) rotateY(24deg);
+}
+
+.box-face {
+    position: absolute;
+    /* left: 50%;
+    top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    background: hsla(var(--hue), 50%, 50%, var(--alpha));
+}
+
+.front,
+.back {
+    width: var(--width);
+    height: var(--height);
+    --hue: 220;
+    --alpha: 0.6;
+    --coeff: -0.5;
+    transform: translate3d(0, 0, calc(var(--depth) * var(--coeff)));
+}
+
+.front {
+    --coeff: 0.5;
+}
+
+.left,
+.right {
+    width: var(--depth);
+    height: var(--height);
+    --rotate: 90deg;
+    --hue: 160;
+    --alpha: 0.8;
+    transform: rotateY(var(--rotate)) translate3d(0, 0, calc(var(--depth) * 0.5));
+}
+
+.left {
+    --rotate: -90deg;
+}
+
+.top,
+.bottom {
+    width: var(--width);
+    height: var(--depth);
+    --hue: 30;
+    --alpha: 0.6;
+    --rotate: 90deg;
+    transform: rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5));
+}
+
+.bottom {
+    --rotate: -90deg;
+}
