@@ -13,26 +13,29 @@ body {
 }
 
 .box {
-    --width: 30vmin;
-    --height: 20vmin;
-    --depth: 10vmin;
+    --width: 25vmin;
+    --height: 25vmin;
+    --depth: 80vmin;
     --hue: 30;
     --alpha: 0.8;
     width: var(--width);
     height: var(--height);
     position: relative;
     /* background: hsla(var(--hue), 50%, 50%, var(--alpha)); */
-    perspective: 800px;
+    perspective: 2000000px;
     transform-style: preserve-3d;
-    transform: rotateX(24deg) rotateY(24deg);
+    transform: rotateX(152deg) rotateY(19deg);
+    /* animation: animateBox 5s infinite linear both; */
 }
 
 .box-face {
     position: absolute;
-    /* left: 50%;
-    top: 50%; */
-    /* transform: translate(-50%, -50%); */
+    left: 50%;
+    top: 50%;
     background: hsla(var(--hue), 50%, 50%, var(--alpha));
+    font-size: calc(1vw + 1rem);
+    text-align: center;
+    line-height: var(--height);
 }
 
 .front,
@@ -42,11 +45,19 @@ body {
     --hue: 220;
     --alpha: 0.6;
     --coeff: -0.5;
-    transform: translate3d(0, 0, calc(var(--depth) * var(--coeff)));
+    transform: translate(-50%, -50%) translate3d(0, 0, calc(var(--depth) * var(--coeff)));
+    background: none;
 }
 
 .front {
     --coeff: 0.5;
+}
+
+.front img,
+.back img {
+    width: 100%;
+    height: auto;
+    transform: rotateX(180deg);
 }
 
 .left,
@@ -56,7 +67,7 @@ body {
     --rotate: 90deg;
     --hue: 160;
     --alpha: 0.8;
-    transform: rotateY(var(--rotate)) translate3d(0, 0, calc(var(--depth) * 0.5));
+    transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5));
 }
 
 .left {
@@ -70,9 +81,18 @@ body {
     --hue: 30;
     --alpha: 0.6;
     --rotate: 90deg;
-    transform: rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5));
+    transform: translate(-50%, -50%) rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5));
 }
 
 .bottom {
     --rotate: -90deg;
+}
+
+@keyframes animateBox {
+    from {
+        transform: rotateX(0) rotateY(360deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(0);
+    }
 }
