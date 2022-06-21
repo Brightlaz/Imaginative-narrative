@@ -1,0 +1,104 @@
+/* body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+} */
+
+.box {
+    --width: 10vmin;
+    --height: 10vmin;
+    --depth: 30vmin;
+    /* width: var(--width); */
+    height: var(--height);
+    position: relative;
+    /* background: hsla(var(--hue), 50%, 50%, var(--alpha)); */
+    perspective: 700000px;
+    transform-style: preserve-3d;
+    transform: rotateX(160deg) rotateY(19deg);
+    animation: animateBox 5s infinite linear both;
+}
+
+.box-face {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* background: hsla(var(--hue), 50%, 50%, var(--alpha)); */
+    font-size: calc(1vw + 1rem);
+    text-align: center;
+    line-height: var(--height);
+}
+
+.front,
+.back {
+    width: var(--width);
+    height: var(--height);
+    --coeff: -0.5;
+    transform: translate(-50%, -50%) translate3d(0, 0, calc(var(--depth) * var(--coeff)));
+    background: none;
+}
+
+.front {
+    --coeff: 0.5;
+}
+
+.front img,
+.back img {
+    width: 100%;
+    height: auto;
+    transform: rotateX(180deg);
+}
+
+.left,
+.right {
+    width: var(--depth);
+    height: var(--height);
+    --rotate: 90deg;
+    transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5));
+}
+
+.left {
+    --rotate: -90deg;
+    border-bottom: 5px ridge black;
+    transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5)) translate(0px, 6px);
+    height: 9vmin;
+    border-top: 5px ridge black;
+}
+
+.right {
+    transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5)) translateY(-6px) translateX(-1px);
+    border: 5px ridge black;
+    height: 8vmin;
+    border-right: none;
+    border-left: none;
+}
+
+.top,
+.bottom {
+    width: var(--width);
+    height: var(--depth);
+    --rotate: 90deg;
+    transform: translate(-50%, -50%) rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5));
+}
+
+.bottom {
+    --rotate: -90deg;
+    transform: translate(-50%, -50%) rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5)) translateX(-29px) translateY(4px);
+    border-right: 5px ridge black;
+    width: 10vmin;
+}
+
+
+/* .top {
+    transform: translate(-50%, -50%) rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5)) translateY(0px) translateX(2px);
+    border-left: 5px ridge black;
+} */
+
+@keyframes animateBox {
+    0% {
+        transform: rotateX(160deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(160deg) rotateY(360deg);
+    }
+}
