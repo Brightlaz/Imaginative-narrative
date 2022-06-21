@@ -117,7 +117,7 @@ footer {
     border-top: 7px solid black;
     font-style: normal;
     font-weight: 900;
-    font-size: 184px;
+    font-size: 150px;
     height: 244px;
     line-height: 223px;
     position: relative;
@@ -134,9 +134,7 @@ footer {
     border-right: 7px solid black;
     position: absolute;
     background-color: #FEE600;
-    width: 324px;
-    padding-left: -12px;
-    padding-right: -6px;
+    width: 300px;
     padding-top: 88px;
     height: 300px;
     z-index: 1;
@@ -165,6 +163,6 @@ footer {
         transform: translateX(50%);
     }
     100% {
-        transform: translateX(-98%);
+        transform: translateX(-80%);
     }
 }
