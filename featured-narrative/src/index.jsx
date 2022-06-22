@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/css/style.css';
 import './assets/css/responsive.css'
-import App from './App';
+import App from './featuredNarrative';
 import reportWebVitals from './reportWebVitals';
 import Home from './routes/home';
 import FullNarrative from './routes/fullNarrative';
@@ -16,8 +16,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <Routes>
-    <Route path="/" element={<App />} />
-    <Route path="home" element={<Home />} />
+    <Route path="/" element={<Home />} />
+    <Route path="featuredNarrative" element={<App />} />
     <Route path="fullNarrative" element={<FullNarrative />} />
   </Routes>
 </BrowserRouter>

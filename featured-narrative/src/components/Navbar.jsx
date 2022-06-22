@@ -3,14 +3,14 @@ import image from "../assets/img/small.svg"
 export default function Navbar() {
     return ( 
     <header>
-        <div class="img">
+        <div className="img">
             <img src={image} alt="" />
             </div>
-        <div class="scroll">
-            <div class="linear">
+        <div className="scroll">
+            <div className="linear">
                 <h2>Images are broken please use your imagination. Imaginative Narrative.</h2>
             </div>
-            <div class="follow-up">
+            <div className="follow-up">
                 <h2>Images are broken please use your imagination. Imaginative Narrative</h2>
             </div>
         </div>
