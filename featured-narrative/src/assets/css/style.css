@@ -38,7 +38,6 @@ header {
     max-width: 100%;
     overflow: hidden;
     align-items: center;
-    margin-bottom: 73px;
     background-color: #fee600;
     border-bottom: 7px solid black;
     position: fixed;
@@ -180,6 +179,30 @@ section {
 
 .card img {
     width: 12px;
+}
+
+.inner img {
+    width: 18px;
+}
+
+.home {
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 400px;
+}
+
+.container2 p {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.head {
+    max-width: 58%;
+}
+
+.container2 {
+    max-width: 40%;
 }
 
 @keyframes linear-flow {
