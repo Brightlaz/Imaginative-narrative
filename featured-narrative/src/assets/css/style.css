@@ -205,6 +205,22 @@ section {
     max-width: 40%;
 }
 
+.narrative {
+    width: 100%;
+    border: 4px solid black;
+    border-radius: 10px;
+    height: 500px;
+}
+
+#textbox {
+    width: inherit;
+    height: 400px;
+}
+
+.off {
+    display: none;
+}
+
 @keyframes linear-flow {
     0% {
         transform: translateX(0%);

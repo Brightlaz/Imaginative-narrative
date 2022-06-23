@@ -14,8 +14,8 @@ export default function Main2(props) {
                     {props.info}
                     <br />
                     <br />
-                    {props.info2 && <p>{props.info2} <br /> <br /></p>} 
-                    Feel free to <Link to="/featuredNarrative">Create your Narrative</Link> share it even stick it on pleaces you love.
+                    {props.info2 && <div>{props.info2} <br /> <br /></div>} 
+                    Feel free to <Link to="/CreateNarrative">Create your Narrative</Link> share it even stick it on pleaces you love.
                     <br />
                     <br />
                     See <Link to="/featuredNarrative">Feautured Narrative.</Link>

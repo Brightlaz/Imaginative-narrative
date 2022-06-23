@@ -27,7 +27,7 @@ export default function Main() {
                     What we wanted to achieve through this project was to find ideas we can use to unit peoples unique experiences on matters they have seen, heard, or thought about. Things that they worry about and of course the ones that make them laugh {happy}.
                     <br />
                     <br />
-                    Feel free to <Link to="/featuredNarrative">Create your Narrative,</Link> share it even stick it on pleaces you love.
+                    Feel free to <Link to="/CreateNarrative">Create your Narrative,</Link> share it even stick it on pleaces you love.
                     <br />
                     <br />
                     See <Link to="/featuredNarrative">Feautured Narrative.</Link>

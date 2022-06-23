@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/css/style.css';
-import './assets/css/responsive.css'
+import './assets/css/responsive.css';
+import './assets/js/script';
 import App from './featuredNarrative';
 import reportWebVitals from './reportWebVitals';
 import Home from './routes/home';
 import FullNarrative from './routes/fullNarrative';
+import CreateNarrative from './routes/createNarrative'
 import {
   BrowserRouter,
   Routes,
@@ -19,9 +21,12 @@ root.render(
     <Route path="/" element={<Home />} />
     <Route path="featuredNarrative" element={<App />} />
     <Route path="fullNarrative" element={<FullNarrative />} />
+    <Route path="CreateNarrative" element={<CreateNarrative />} />
   </Routes>
 </BrowserRouter>
 );
+
+
 
 
 // If you want to start measuring performance in your app, pass a function
