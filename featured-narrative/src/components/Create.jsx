@@ -34,10 +34,8 @@ class NameForm extends React.Component {
   }
 export default function Create() {
     const happy = ':)'; 
-    const preview1 = document.querySelector('#textbox')
     return ( 
         <main>
-            {console.log(preview1)}
             <h1> Below we have our feautured Narrative from </h1>
             <div className = "home-link" >
             <Link to = "/" > Go back to home </Link> 

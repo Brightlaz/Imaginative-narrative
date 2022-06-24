@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <title>Home</title>
+    <title>Create Narrative</title>
 </head>
 
 <body>
@@ -27,19 +27,33 @@
 
 
     </header>
-    <main class="home">
-        <div class="inner head">
-            <div id="small"><img src='assets/img/small.svg' alt="icon" /></div>
-            <h1>This may be an image of an apple. You might imagine it to be a red apple but someone else will imagine a green apple.</h1>
+    <main>
+        <h1>Create your own Narrative</h1>
+        <div class="home-link">
+            <a href="index.html">Go back to home</a>
         </div>
-        <div class="container2">
-            <div>
+        <div class="buttons">
+            <div id="write"> Input </div>
+            <div id="read"> Output </div>
+        </div>
+        <form class="narrative" id="input">
+            <div> Enter your narrative </div>
+            <textarea name="textbox" id="textbox" cols="30" rows="10"> </textarea>
+        </form>
+        <div class="inner narrative off" id="output">
+            <div id="small"><img src='assets/img/small.svg' alt="icon" /></div>
+            <h1 id="h1"> This may be an image of <span id="preview"></span>.</h1>
+        </div>
+        <div class="container">
+            <div class="about">
                 <p>
                     What we wanted to achieve through this project was to find ideas we can use to unit peoples unique experiences on matters they have seen, heard, or thought about. Things that they worry about and of course the ones that make them laugh :).
-                    <br />
-                    <br /> Feel free to <a href="CreateNarrative.html">Create your Narrative</a> share it even stick it on pleaces you love.
-                    <br />
-                    <br /> See <a href="featuredNarrative.html">Featured Narrative</a>
+                    </br>
+                    </br>
+                    Feel free to <a href="CreateNarrative.html">Create your Narrative,</a> share it even stick it on pleaces you love.
+                    </br>
+                    </br>
+                    See <a href="featuredNarrative.html">Feautured Narrative.</a>
                 </p>
             </div>
         </div>

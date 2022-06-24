@@ -1,19 +1,16 @@
-// const linear = document.querySelector('.linear')
-// const followUp = document.querySelector('.follow-up')
+const read = document.querySelector('#read');
+const write = document.querySelector('#write');
+const input = document.querySelector('#input')
+const textBox = document.querySelector('#textbox')
+const output = document.querySelector('#output')
 
-// const animation = () => {
-//     linear.style.animation = 'linear-flow 10s ease-in-out';
-//     if (linear.getBoundingClientRect().left <= -1118) {
-//         followUp.style.animation = 'linear-flow2 10s ease-in-out';
-//     } else {
-//         animation()
-//     }
-//     if (followUp.getBoundingClientRect().left <= -1118) {
-//         linear.style.animation = 'linear-flow 10s ease-in-out'
-//     } else {
-//         animation()
-//     }
-// }
-// animation()
-const card = document.querySelector('.card')
-card.addEventListener('click', () => { console.log('card') })
+read.addEventListener('click', () => {
+    let narrative = textBox.value
+    input.classList.add('off');
+    output.classList.remove('off');
+    preview.textContent = narrative
+})
+write.addEventListener('click', () => {
+    input.classList.remove('off');
+    output.classList.add('off');
+})
