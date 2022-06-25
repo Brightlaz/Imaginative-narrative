@@ -29,9 +29,6 @@
             .home-link {
                 font-size: 23px;
             }
-            .container {
-                font-size: 20px;
-            }
             .about {
                 width: 450px;
             }
@@ -114,7 +111,7 @@
             h1 {
                 font-size: 31px;
                 line-height: 52px;
-                width: 270px;
+                width: 300px;
             }
             .container {
                 font-size: 15px;
@@ -158,6 +155,7 @@
             .container2 p {
                 font-size: 15px;
                 width: 280px;
+                line-height: 25px;
             }
             .narrative {
                 width: 90%;
@@ -237,6 +235,9 @@
             .container2 p {
                 font-size: 15px;
                 width: 219px;
+            }
+            .container {
+                font-size: 15px;
             }
             .box1 {
                 width: 94px;

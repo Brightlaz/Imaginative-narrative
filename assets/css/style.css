@@ -8,6 +8,16 @@
     padding: 0;
 }
 
+::selection {
+    background-color: #000000;
+    color: #fee600;
+}
+
+ ::-moz-selection {
+    background-color: #000000;
+    color: #fee600;
+}
+
 body {
     cursor: url(/assets/img/cursor.png), url(/assets/img/cursor.png), default;
     overflow-y: scroll;
@@ -130,7 +140,7 @@ h2 {
 
 .container {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 30px;
     margin-top: 75px;
     margin-bottom: 260px;
