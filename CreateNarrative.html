@@ -15,17 +15,20 @@
 
 <body>
     <header>
-        <div class="img"><img src="assets/img/small.svg" alt=""></div>
-        <div class="scroll">
-            <div class="linear">
-                <h2>Images are broken please use your imagination. Imaginative Narrative.</h2>
+        <div style="
+        position: relative;
+    ">
+            <div class="img"><img src="assets/img/small.svg" alt=""></div>
+            <div class="scroll">
+                <div class="linear">
+                    <h2>Images are broken please use your imagination. Imaginative Narrative.</h2>
+                </div>
+                <div class="follow-up">
+                    <h2>Images are broken please use your imagination. Imaginative Narrative.</h2>
+                </div>
             </div>
-            <div class="follow-up">
-                <h2>Images are broken please use your imagination. Imaginative Narrative.</h2>
-            </div>
+            <hr />
         </div>
-
-
     </header>
     <main>
         <h1>Create your own Narrative</h1>
@@ -41,8 +44,7 @@
             <textarea name="textbox" id="textbox" cols="30" rows="10"> </textarea>
         </form>
         <div class="inner narrative off" id="output">
-            <div id="small"><img src='assets/img/small.svg' alt="icon" /></div>
-            <h1 id="h1"> This may be an image of <span id="preview"></span>.</h1>
+            <h1 id="h1"><sup id="small"><img src='assets/img/small.svg' alt="icon" /></sup>This may be an image of <span id="preview"></span>.</h1>
         </div>
         <div class="container">
             <div class="about">
@@ -83,6 +85,7 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/createNarrative.js"></script>
 </body>
 
 </html>
