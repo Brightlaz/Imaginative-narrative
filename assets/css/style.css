@@ -3,13 +3,13 @@
 *,
 *::after,
 *::before {
-    cursor: url(/assets/img/cursor.svg), default;
+    cursor: url(/assets/img/cursor.png), url(/assets/img/cursor.png), auto;
     margin: 0;
     padding: 0;
 }
 
 body {
-    cursor: url(/assets/img/cursor.svg), default;
+    cursor: url(/assets/img/cursor.png), url(/assets/img/cursor.png), auto;
     overflow-y: scroll;
 }
 
@@ -43,7 +43,7 @@ a {
 }
 
 a:hover {
-    cursor: url(/assets/img/hover.svg), auto;
+    cursor: url(/assets/img/hover.png), url(/assets/img/hover.png), auto;
     text-decoration: none;
 }
 
@@ -299,7 +299,7 @@ section {
 
 #write:hover,
 #read:hover {
-    cursor: url(/assets/img/hover.svg), auto;
+    cursor: url(/assets/img/hover.png), url(/assets/img/hover.png), auto;
     padding: 10px;
     transform: translateY(-5px);
     transition-timing-function: ease-in-out;
