@@ -1,6 +1,7 @@
 import React from "react";
 import shape from "../assets/img/shape.svg"
 export default function Footer() {
+    const imagine = 'Imaginative Narrative';
     return ( 
         <footer>
             <div className="box1">
@@ -13,8 +14,13 @@ export default function Footer() {
                     <div className="box-face bottom"></div>
                 </div>
             </div>
-            <div className="text">
-                Imaginative Narrative
+            <div className="scroll text">
+                <div className="foot1">
+                    <h2 className="imagine">{imagine}</h2>
+                </div>
+                <div className="foot2">
+                    <h2 className="imagine">{imagine}</h2>
+                </div>
             </div>
         </footer>
     )

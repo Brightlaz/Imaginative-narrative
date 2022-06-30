@@ -1,32 +1,32 @@
 @media (max-width: 992px) {
+    footer {
+        height: 217px;
+        line-height: 391px;
+    }
+    .box1 {
+        padding-top: 81px;
+    }
     header h2 {
         font-size: 40px;
     }
-    .follow-up {
+    /* .follow-up {
         display: none;
         animation: nonee;
-    }
-    .linear {
+    } */
+    /* .linear {
         animation: linear-flow 15s ease-in-out infinite;
-    }
+    } */
     h1 {
         font-weight: 900;
         font-size: 41px;
         line-height: 62px;
-        width: 500px;
+        width: 600px;
     }
     .home-link {
-        margin-top: 150px;
         font-size: 23px;
-    }
-    .container {
-        font-size: 20px;
     }
     .about {
         width: 450px;
-    }
-    footer {
-        font-size: 100px;
     }
     .scroll {
         padding-left: 0;
@@ -35,31 +35,70 @@
         flex: 0 0 47%;
         margin-bottom: 26px;
     }
-    @keyframes linear-flow {
+    .head {
+        max-width: 100%;
+    }
+    .container2 {
+        max-width: 100%;
+    }
+    .container2 p {
+        font-size: 20px;
+        width: 500px;
+        margin-top: 50px;
+    }
+    #textbox {
+        width: 84%;
+    }
+    /* @keyframes linear-flow {
         0% {
             transform: translateX(29%);
         }
         100% {
             transform: translateX(-48%);
         }
-    }
-    @keyframes linear-flow3 {
+    } */
+    /* @keyframes linear-flow3 {
         0% {
             transform: translateX(24%);
         }
         100% {
             transform: translateX(-54%);
         }
+    } */
+}
+
+@media (max-width: 910px) {
+    footer {
+        height: 148px;
+        line-height: 258px;
+    }
+    .box1 {
+        padding-top: 53px;
     }
 }
 
 @media (max-width: 600px) {
+    .follow-up,
+    .linear {
+        max-width: 930px;
+    }
     .img {
-        padding: 0 15px;
-        padding-top: 11px;
+        padding: 8px 20px;
+        border-right: 6px solid black;
+    }
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .img img {
         width: 25.31px;
+    }
+    header {
+        height: 53px;
+    }
+    header hr {
+        border: 3px solid black;
+        top: 46px;
     }
     header h2 {
         font-size: 30px;
@@ -68,66 +107,88 @@
     h1 {
         font-size: 31px;
         line-height: 52px;
-        width: 270px;
+        width: 300px;
     }
     .container {
         font-size: 15px;
         line-height: 25px;
     }
     .home-link {
-        margin-top: 100px;
         font-size: 20px;
     }
     footer {
-        margin-top: 200px;
         font-size: 50px;
-        height: 150px;
-        line-height: 150px;
+        height: 75px;
+        line-height: 140px;
+    }
+    .imagine {
+        margin-right: 40px;
     }
     .box1 {
-        width: 150px;
-        padding-top: 58px;
-        height: 200px;
+        width: 135px;
+        padding-top: 32px;
     }
     .right {
-        transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5)) translateY(-4px) translateX(-1px);
-        border: 5px ridge black;
+        transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5)) translateY(-2px) translateX(0px);
+        border: 3px ridge black;
         height: 6vmin;
         border-right: none;
         border-left: none;
     }
     .left {
         --rotate: -90deg;
-        border-bottom: 5px ridge black;
-        transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5)) translate(0px, 3px);
+        border-bottom: 3px ridge black;
+        transform: translate(-50%, -50%) rotateY(var(--rotate)) translate3d(0, 0, calc(var(--width) * 0.5)) translate(0px, 2px);
         height: 8vmin;
-        border-top: 5px ridge black;
+        border-top: 3px ridge black;
     }
     .bottom {
         --rotate: -90deg;
-        transform: translate(-50%, -50%) rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5)) translateX(-17px) translateY(4px);
-        border-right: 5px ridge black;
+        transform: translate(-50%, -50%) rotateX(var(--rotate)) translate3d(0, 0, calc(var(--height) * 0.5)) translateX(-10px) translateY(0px);
+        border-right: 3px ridge black;
         width: 10vmin;
     }
     .card {
         flex: 0 0 100%;
     }
-    @keyframes linear-flow {
+    .container2 p {
+        font-size: 15px;
+        width: 280px;
+        line-height: 25px;
+    }
+    .narrative {
+        width: 90%;
+        padding: 23px;
+        padding-right: 10px;
+        height: 390px;
+    }
+    #textbox {
+        width: 77%;
+        height: 292px;
+        padding: 20px;
+        font-size: 25px;
+    }
+    #h1 {
+        font-size: 25px;
+        line-height: 45px;
+        width: 270px;
+    }
+    /* @keyframes linear-flow {
         0% {
             transform: translateX(16%);
         }
         100% {
             transform: translateX(-37%);
         }
-    }
-    @keyframes linear-flow3 {
+    } */
+    /* @keyframes linear-flow3 {
         0% {
             transform: translateX(3%);
         }
         100% {
             transform: translateX(-35%);
         }
-    }
+    } */
 }
 
 @media (min-width: 539px) and (max-width: 600px) {
@@ -137,20 +198,48 @@
     h1 {
         width: 300px;
     }
-    @keyframes linear-flow {
+    .container2 p {
+        font-size: 15px;
+        width: 380px;
+    }
+    footer {
+        font-size: 50px;
+        height: 90px;
+        line-height: 168px;
+    }
+    /* @keyframes linear-flow {
         0% {
             transform: translateX(20%);
         }
         100% {
             transform: translateX(-36%);
         }
-    }
-    @keyframes linear-flow3 {
+    } */
+    /* @keyframes linear-flow3 {
         0% {
             transform: translateX(12%);
         }
         100% {
             transform: translateX(-32%);
         }
+    } */
+}
+
+@media (max-width: 280px) {
+    h1 {
+        font-size: 30px;
+        line-height: 44px;
+        width: 227px;
+    }
+    .container2 p {
+        font-size: 15px;
+        width: 219px;
+    }
+    .container {
+        font-size: 15px;
+    }
+    .box1 {
+        width: 94px;
+        padding-top: 32px;
     }
 }

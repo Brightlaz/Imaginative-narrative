@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/css/style.css';
 import './assets/css/responsive.css';
-import './assets/js/script';
 import App from './featuredNarrative';
 import reportWebVitals from './reportWebVitals';
 import Home from './routes/home';
