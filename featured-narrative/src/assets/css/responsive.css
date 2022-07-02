@@ -156,22 +156,10 @@
         width: 280px;
         line-height: 25px;
     }
-    .narrative {
-        width: 90%;
-        padding: 23px;
-        padding-right: 10px;
-        height: 390px;
-    }
     #textbox {
         width: 77%;
-        height: 292px;
         padding: 20px;
         font-size: 25px;
-    }
-    #h1 {
-        font-size: 25px;
-        line-height: 45px;
-        width: 270px;
     }
     /* @keyframes linear-flow {
         0% {

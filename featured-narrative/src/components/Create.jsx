@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import img from '../assets/img/small.svg'
+import img from '../assets/img/small.svg';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 // import script from './script'
 
 export default function Create() {
@@ -9,6 +11,8 @@ export default function Create() {
     const [review, setReview] = React.useState('');
     const [output, setOutput] = React.useState('inner narrative off');
     const [input, setInput] = React.useState('narrative');
+
+    console.log(output)
 
     function text(event) {
       event.preventDefault()
@@ -25,6 +29,27 @@ export default function Create() {
       setOutput('inner narrative off')
       setInput('narrative')
     }
+// function print (event) {
+//   html2pdf(print, {
+//     margin: 10,
+//     filename: 'create.pdf',
+//     image: {
+//         type: 'jpeg',
+//         quality: 0.98
+//     },
+//     html2canvas: {
+//         scale: 2,
+//         logging: true,
+//         dpi: 192,
+//         letterRendering: true
+//     },
+//     jsPDF: {
+//         unit: 'mm',
+//         format: 'a4',
+//         orientation: 'portrait'
+//     }
+// });
+// }
     return ( 
         <main>
           <h1> Below we have our feautured Narrative from </h1>
@@ -35,13 +60,19 @@ export default function Create() {
               <div id="write" onClick={write}> Input </div>
               <div id="read" onClick={read}> Output </div>
           </div>
-          <form className = {input}>
-                <div> Enter your narrative </div>
-                <textarea name = "textbox" id = "textbox" value={textarea} onChange={text}> </textarea>
-          </form> 
-          <div className={output}>
-            <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
-          </div>
+          <div class="create-narrative">
+            <form className = {input}>
+                  <div> Enter your narrative </div>
+                  <textarea name = "textbox" id = "textbox" value={textarea} onChange={text}> </textarea>
+            </form> 
+            <div className={output} ref={ref}>
+              <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
+            </div>
+        </div>
+        <Pdf targetRef={ref} filename="Narrative.pdf">
+        {({ toPdf }) =><a id="button" onClick={toPdf}>Download</a>}
+      </Pdf>
+        {/* <a id="button" onClick={print}>Download</a> */}
           <div className="container">
                 <div className="about">
                     <p>
