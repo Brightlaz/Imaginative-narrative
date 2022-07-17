@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import img from '../assets/img/small.svg';
 import Pdf from "react-to-pdf";
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 const ref = React.createRef();
 // import script from './script'
 
@@ -29,6 +30,17 @@ export default function Create() {
       setOutput('inner narrative off')
       setInput('narrative')
     }
+    const options = {
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4'
+    }
+    const styles = StyleSheet.create({
+      page: {
+        width: "100%",
+        backgroundColor: '#E4E4E4'
+      }
+    })
 // function print (event) {
 //   html2pdf(print, {
 //     margin: 10,
@@ -65,13 +77,13 @@ export default function Create() {
                   <div> Enter your narrative </div>
                   <textarea name = "textbox" id = "textbox" value={textarea} onChange={text}> </textarea>
             </form> 
-            <div className={output} ref={ref}>
+            <div className={output} ref={ref} style={styles.page}>
               <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
             </div>
         </div>
-        <Pdf targetRef={ref} filename="Narrative.pdf">
+        <Pdf targetRef={ref} filename="Narrative.pdf" options={options} logging={true} dpi={192} letterRendering={true} quality={0.98}>
         {({ toPdf }) =><a id="button" onClick={toPdf}>Download</a>}
-      </Pdf>
+        </Pdf>
         {/* <a id="button" onClick={print}>Download</a> */}
           <div className="container">
                 <div className="about">
