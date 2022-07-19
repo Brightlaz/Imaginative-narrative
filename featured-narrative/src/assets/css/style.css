@@ -112,13 +112,13 @@ header h2 {
 .linear {
     animation: linear-flow2 40s linear infinite;
     animation-delay: -39s;
-    max-width: 1250px;
+    max-width: 1420px;
 }
 
 .follow-up {
     animation: linear-flow 40s linear infinite;
     animation-delay: -19s;
-    max-width: 1250px;
+    max-width: 1420px;
 }
 
 main {
