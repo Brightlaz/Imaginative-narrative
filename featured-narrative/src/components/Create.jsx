@@ -2,8 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import img from '../assets/img/small.svg';
 import Pdf from "react-to-pdf";
-import { Document, Page, Text, View, StyleSheet, PDFViewer } from '@react-pdf/renderer';
-
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 const ref = React.createRef();
 // import script from './script'
 
@@ -36,46 +35,12 @@ export default function Create() {
       unit: 'mm',
       format: 'a4'
     }
-   
-    // const styles = StyleSheet.create({
-    //   page: {
-    //     backgroundColor: 'pink',
-    //     width: '20000px',
-    //     marginLeft: "20px",
-    //     overflow: 'hidden',
-    //     margin: '10',
-    //     padding: '10',
-    //   }, 
-    //   text: {    
-    //     fontWeight: '950',
-    //     fontSize: '35px',
-    //     lineHeight: '62px',
-        
-    //   },
-      
-    //   document: {
-    //     width: '2000px',
-    //    color: 'black'
-    //   }
-    // })
-    // padding: 50px; */
-    /* padding-right: 10px; */
-    /* overflow: scroll; */
-    /* height: 100%; */
-    /* overflow-x: hidden; */
-    /* position: relative; */
-    // const MyDocument = () => (
-    //   <Document style={styles.page}>
-    //      <div className={output} size="A4" ref={ref} >
-    //             <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
-    //     </div>
-    //   </Document>
-    // );
-    // const App = () => (
-    //   <PDFViewer>
-    //     <MyDocument />
-    //   </PDFViewer>
-    // );
+    const styles = StyleSheet.create({
+      page: {
+        width: "100%",
+        backgroundColor: '#E4E4E4'
+      }
+    })
 // function print (event) {
 //   html2pdf(print, {
 //     margin: 10,
@@ -97,13 +62,6 @@ export default function Create() {
 //     }
 // });
 // }
-// const doc = (
-//       <Document>
-          // <div className={output} size="A4" ref={ref} style={styles.page}>
-          //       <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
-          // </div>
-//       </Document>
-//     );
     return ( 
         <main>
           <h1> Below we have our feautured Narrative from </h1>
@@ -118,11 +76,10 @@ export default function Create() {
             <form className = {input}>
                   <div> Enter your narrative </div>
                   <textarea name = "textbox" id = "textbox" value={textarea} onChange={text}> </textarea>
-            </form>
-            <div className={output} size="A4" ref={ref} >
-                <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
+            </form> 
+            <div className={output} ref={ref}>
+              <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
             </div>
-
         </div>
         <Pdf targetRef={ref} filename="Narrative.pdf" options={options} logging={true} dpi={192} letterRendering={true} quality={0.98}>
         {({ toPdf }) =><a id="button" onClick={toPdf}>Download</a>}

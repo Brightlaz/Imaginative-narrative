@@ -3,7 +3,7 @@
 *,
 *::after,
 *::before {
-    /* cursor: url(/assets/img/cursor.png), url(/assets/img/cursor.png), default; */
+    cursor: url(../img/cursor.png), url(../img/cursor.png), default;
     margin: 0;
     padding: 0;
 }
@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-    /* cursor: url('/assets/img/hover.png'), url('/assets/img/hover.png'), pointer; */
+    cursor: url(../img/hover.png), url(../img/hover.png), pointer;
     text-decoration: none;
 }
 
@@ -334,7 +334,7 @@ section {
 
 #write:hover,
 #read:hover {
-    /* cursor: url('/assets/img/hover.png'), url('/assets/img/hover.png'), pointer; */
+    cursor: url(../img/hover.png), url(../img/hover.png), pointer;
     padding: 10px;
     transform: translateY(-5px);
     transition-timing-function: ease-in-out;
