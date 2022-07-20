@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import img from '../assets/img/small.svg';
 import Pdf from "react-to-pdf";
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Document, Page, Text, View, Image, StyleSheet } from '@react-pdf/renderer';
 const ref = React.createRef();
 // import script from './script'
 
@@ -31,14 +31,21 @@ export default function Create() {
       setInput('narrative')
     }
     const options = {
-      orientation: 'portrait',
+      orientation: 'landscape',
       unit: 'mm',
-      format: 'a4'
+      format: 'A4'
     }
     const styles = StyleSheet.create({
       page: {
-        width: "100%",
         backgroundColor: '#E4E4E4'
+      },
+      section: {
+        paddingRight: '100px'
+      },
+      text: {
+        fontWeight: '950',
+        fontSize: '35px',
+        lineHeight: '62px',
       }
     })
 // function print (event) {
@@ -76,12 +83,20 @@ export default function Create() {
             <form className = {input}>
                   <div> Enter your narrative </div>
                   <textarea name = "textbox" id = "textbox" value={textarea} onChange={text}> </textarea>
-            </form> 
-            <div className={output} ref={ref}>
-              <h1 id="h1"><sup id="small"><img src={img} alt="icon" /></sup>This may be an image of <span id="preview">{review}</span>.</h1>
-            </div>
+            </form>
+            <Document ref={ref}>
+              <Page size="A4" style={styles.page}>
+                <View>
+                  <div className={output} style={styles.section} >
+                    <Text style={styles.text}><sup id="small"><Image><img src={img} alt="icon" /></Image></sup>This may be an image of <span id="preview">{review}.</span></Text>
+                  </div>
+                </View>
+              </Page>
+            </Document>
+           
         </div>
-        <Pdf targetRef={ref} filename="Narrative.pdf" options={options} logging={true} dpi={192} letterRendering={true} quality={0.98}>
+        {/* logging={true} dpi={192} letterRendering={true} quality={0.98} */}
+        <Pdf targetRef={ref} filename="Narrative.pdf" options={options}>
         {({ toPdf }) =><a id="button" onClick={toPdf}>Download</a>}
         </Pdf>
         {/* <a id="button" onClick={print}>Download</a> */}

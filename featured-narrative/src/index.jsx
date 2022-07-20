@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './routes/home';
 import FullNarrative from './routes/fullNarrative';
 import CreateNarrative from './routes/createNarrative'
+import ScrollToTop from "../src/ScrollToTop";
 import {
   BrowserRouter,
   Routes,
@@ -15,14 +16,20 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="featuredNarrative" element={<App />} />
-    <Route path="fullNarrative" element={<FullNarrative />} />
-    <Route path="CreateNarrative" element={<CreateNarrative />} />
-  </Routes>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+       <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="featuredNarrative" element={<App />} />
+          <Route path="fullNarrative" element={<FullNarrative />} />
+          <Route path="CreateNarrative" element={<CreateNarrative />} />
+        </Routes>
+       </ScrollToTop>
+ 
+  
 </BrowserRouter>
+  
+  
 );
 
 
